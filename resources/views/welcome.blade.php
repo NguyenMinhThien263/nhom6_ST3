@@ -83,13 +83,24 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
-
-                <form action="{{ url('/admin/test') }}" method="post">
+                <p>Day la store</p>
+                
+                <form action="{{ url('/photos') }}" method="post">
                     @csrf
-                    <label for="fname">First name:</label><br>
-                    <input type="text" id="fname" name="fname" value="John"><br>
-                    <label for="lname">Last name:</label><br>
-                    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                    <input type="submit" value="Submit">
+                  </form>
+                <p>Day la update</p>
+
+                  <form action="{{ url('/photos/123') }}" method="post">
+                  @csrf
+                    @method('PUT')
+                    <input type="submit" value="Submit">
+                  </form>
+
+                  <p>Day la destroy</p>
+                  <form action="{{ url('/photos/123') }}" method="post">
+                  @csrf
+                    @method('DELETE')
                     <input type="submit" value="Submit">
                   </form>
             </div>

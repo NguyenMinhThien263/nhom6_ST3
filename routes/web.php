@@ -13,8 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+
+Route::get('/',function(){
     return view('welcome');
 });
+Route::resource('photos', 'PhotoController');
 
-Route::post('/admin/test', 'TestController@index')->middleware('test');
